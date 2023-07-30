@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # x5Group пример автотестов
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="mediafiles/icons/Intelij_IDEA.svg">
@@ -17,8 +16,10 @@
 
 ### Запуск из терминала
 ```
+gradle clean test -Denv=local 
 ```
-gradle clean remote_test
+```
+gradle clean test -Denv=remote
 ```
 
 ## <img src="mediafiles/icons/Jenkins.svg" title="Jenkins" width="4%"/> Jenkins
@@ -56,6 +57,3 @@ gradle clean remote_test
 <p align="center">
   <img title="Selenoid Video" src="mediafiles/screenshots/example.gif">
 </p>
-=======
-# qa_guru_allure_testOps_20
->>>>>>> 97bdf0f5c0039f7ba7bc2fb3b969cf5b3c70ba00
