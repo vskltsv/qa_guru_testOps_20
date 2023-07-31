@@ -60,5 +60,5 @@ gradle clean test -Denv=remote
 ## Видео пример запуска тестов в Selenoid
 
 <p align="center">
-  <img title="Selenoid Video" src="mediafiles/screenshots/example.gif">
+  <img title="Selenoid Video" src="mediafiles/screenshots/test.mp4">
 </p>
