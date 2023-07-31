@@ -1,4 +1,5 @@
-# x5Group пример автотестов
+# Пример автотестов на x5Group
+
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="mediafiles/icons/Intelij_IDEA.svg">
 <img width="6%" title="Java" src="mediafiles/icons/Java.svg">
@@ -15,19 +16,23 @@
 </p>
 
 ### Запуск из терминала
+
 ```
 gradle clean test -Denv=local 
 ```
+
 ```
 gradle clean test -Denv=remote
 ```
 
 ## <img src="mediafiles/icons/Jenkins.svg" title="Jenkins" width="4%"/> Jenkins
+
 <p align="center">
-<img title="Jenkins Build" src="mediafiles/screenshots/JenkinsBuild.png">
+<img title="Jenkins Build" src="mediafiles/screenshots/jenkins.png">
 </p>
 
 ## <img src="mediafiles/icons/Allure_Report.svg" title="Allure Report" width="4%"/> Allure-отчет
+
 ### Overview
 
 <p align="center">
@@ -37,19 +42,19 @@ gradle clean test -Denv=remote
 ## <img src="mediafiles/icons/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Allure TestOps
 
 <p align="center">
-<img title="Allure TestOps DashBoard" src="mediafiles/screenshots/TestOpsView.png">
+<img title="Allure TestOps DashBoard" src="mediafiles/screenshots/allureTestOps.png">
 </p>
 
 ## <img src="mediafiles/icons/Jira.svg" title="Jira" width="4%"/> Jira
 
 <p align="center">
-<img title="Jira Task" src="mediafiles/screenshots/JiraView.png">
+<img title="Jira Task" src="mediafiles/screenshots/jira.png">
 </p>
 
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="mediafiles/icons/Telegram.svg"> Отправка уведомления в Telegram
 
 <p align="center">
-<img width="70%" title="Telegram Notifications" src="mediafiles/screenshots/tgView.png">
+<img width="70%" title="Telegram Notifications" src="mediafiles/screenshots/telegram.png">
 </p>
 
 ## Видео пример запуска тестов в Selenoid
