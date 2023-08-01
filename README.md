@@ -91,7 +91,7 @@ clean remote_test
 ## <img alt="Allure" height="25"  src="mediafiles/icons/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
 ____
 <p align="center">  
-<img title="Allure Overview Dashboard" src="images/screen/telegram.png" width="550">  
+<img title="Allure Overview Dashboard" src="mediafiles/screenshots/Telegram.png" width="550">  
 </p>
 
 ____
