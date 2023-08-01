@@ -1,14 +1,45 @@
 package tests;
 
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import pages.MainPage;
 
+import java.util.List;
+import java.util.stream.Stream;
+
+import static com.codeborne.selenide.CollectionCondition.texts;
+import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @Tag("remote")
 public class MainPageTest extends TestBase {
+    public MainPage mainPage = new MainPage();
+
+
+
+    @DisplayName("Switch language check")
+    @ParameterizedTest(name = "Language: {0}")
+    @MethodSource("switchLanguageOnMainPageData")
+    public void switchLanguageOnMainPage(List<String> items) {
+        step("Open main page", () -> open(""));
+        step("Click on the lang switcher", () -> mainPage.clickSwitchLanguageIcon());
+        step("Result check", () -> $$(".header__nav-list").should(texts(items)));
+    }
+
+    static Stream<Arguments> switchLanguageOnMainPageData() {
+        return Stream.of(
+                Arguments.of(List.of("Company\n" +
+                        "Consumer\n" +
+                        "For Partners\n" +
+                        "Investors\n" +
+                        "Press Centre")));
+    }
 
     @DisplayName("Company tab titles check")
     @Test

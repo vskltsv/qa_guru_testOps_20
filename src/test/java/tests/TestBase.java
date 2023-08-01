@@ -18,7 +18,6 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
     static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
-    public MainPage mainPage = new MainPage();
 
     @BeforeAll
     static void beforeAll() {
