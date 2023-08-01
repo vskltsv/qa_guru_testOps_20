@@ -22,6 +22,7 @@ ____
 * <a href="#telegram">Уведомление в Telegram при помощи бота</a>
 
 * <a href="#video">Примеры видео выполнения тестов на Selenoid</a>
+
 ____
 <a id="tools"></a>
 ## <a name="Технологии и инструменты">**Технологии и инструменты:**</a>
@@ -50,7 +51,17 @@ gradle clean test -Denv=local
 gradle clean test -Denv=remote
 ```
 
-## <img src="mediafiles/icons/Jenkins.svg" title="Jenkins" width="4%"/> Jenkins
+***Удалённый запуск через Jenkins:***
+```bash  
+clean remote_test
+"-Dbrowser=${browser}"
+"-DbrowserVersion=${browserVersion}"
+"-DbrowserSize=${browserSize}"
+"-DbaseUrl=${baseUrl}"
+"-DremoteUrl=${remoteUrl}"
+```
+<a id="jenkins"></a>
+## <img src="mediafiles/icons/Jenkins.svg" title="Jenkins" width="4%"/></a><a name="Сборка"></a>Сборка в [Jenkins](https://jenkins.autotests.cloud/job/vskltsv_allure_testOps_20/)</a>
 
 <p align="center">
 <img title="Jenkins Build" src="mediafiles/screenshots/jenkins.png">
@@ -76,14 +87,17 @@ gradle clean test -Denv=remote
 <img title="Jira Task" src="mediafiles/screenshots/jira.png">
 </p>
 
-## <img width="4%" style="vertical-align:middle" title="Telegram" src="mediafiles/icons/Telegram.svg"> Отправка уведомления в Telegram
-
-<p align="center">
-<img width="70%" title="Telegram Notifications" src="mediafiles/screenshots/telegram.png">
+<a id="telegram"></a>
+## <img alt="Allure" height="25"  src="mediafiles/icons/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
+____
+<p align="center">  
+<img title="Allure Overview Dashboard" src="images/screen/telegram.png" width="550">  
 </p>
 
-## Видео пример запуска тестов в Selenoid
-
+____
+<a id="video"></a>
+## <img alt="Selenoid" height="25" src="images/logo/Selenoid.svg" width="25"/></a> Примеры видео выполнения тестов на Selenoid
+____
 <p align="center">
-  <img title="Selenoid Video" src="mediafiles/screenshots/test.gif">
+<img title="Selenoid Video" src="mediafiles/icons/Selenoid.svg" width="550" height="350"  alt="video">   
 </p>
