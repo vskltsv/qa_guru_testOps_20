@@ -56,7 +56,7 @@ public class MainPageTest extends TestBase {
 
     @DisplayName("Consumer tab title check")
     @Test
-    public void theConsumerTabContent() {
+    public void theConsumerTabContentTest() {
         step("Open main page", () -> open(""));
         step("Open consumer tab", () -> mainPage.clickOnText("Покупателю"));
         step("Check header content", () -> mainPage.titleCheck("X5 для покупателя"));
@@ -65,7 +65,7 @@ public class MainPageTest extends TestBase {
 
     @DisplayName("Check address on page")
     @Test
-    public void viewAddressOnPage() {
+    public void viewAddressOnPageTest() {
         step("Open main page", () -> open(""));
         step("Scroll to address", () -> mainPage.scrollToFooter());
         step("Check address value", () -> mainPage.footerAddressCheck("119049, Россия, г. Москва, улица Коровий Вал, 5, стр. 1"));
@@ -73,7 +73,7 @@ public class MainPageTest extends TestBase {
 
     @DisplayName("Search field test")
     @Test
-    public void searchFieldCheck() {
+    public void searchFieldCheckTest() {
         step("Open main page", () -> open(""));
         step("Click search icon", () -> mainPage.searchIconClick());
         step("Set value in search field", () -> mainPage.setValueOnSearchField("Новости"));
