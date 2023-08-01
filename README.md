@@ -96,8 +96,8 @@ ____
 
 ____
 <a id="video"></a>
-## <img alt="Selenoid" height="25" src="mediafiles/screenshots/test.gif" width="25"/></a> Пример видео выполнения тестов на Selenoid
+## <img alt="Selenoid" height="25" src="mediafiles/icons/Selenoid.svg" width="25"/></a> Пример видео выполнения тестов на Selenoid
 ____
 <p align="center">
-<img title="Selenoid Video" src="mediafiles/icons/Selenoid.svg" width="550" height="350"  alt="video">   
+<img title="Selenoid Video" src="mediafiles/screenshots/test.gif" width="550" height="350"  alt="video">   
 </p>
