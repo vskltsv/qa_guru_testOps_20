@@ -7,7 +7,6 @@ ____
 
 * <a href="#tools">Технологии и инструменты</a>
 
-* <a href="#cases">Примеры автоматизированных тест-кейсов</a>
 
 * <a href="#jenkins">Сборка в Jenkins</a>
 
@@ -67,25 +66,24 @@ clean remote_test
 <img title="Jenkins Build" src="mediafiles/screenshots/jenkins.png">
 </p>
 
-## <img src="mediafiles/icons/Allure_Report.svg" title="Allure Report" width="4%"/> Allure-отчет
 
-### Overview
+<a id="allure"></a>
+## <img alt="Allure" height="25" src="mediafiles/icons/Allure_Report.svg" width="25"/></a> <a name="Allure"></a>Allure [отчет](https://jenkins.autotests.cloud/job/vskltsv_allure_testOps_20/allure/)</a>
+___
 
-<p align="center">
-<img title="Allure Overview" src="mediafiles/screenshots/allureReport.png">
+<p align="center">  
+<img title="Allure Overview Dashboard" src="mediafiles/screenshots/jenkins.png" width="850">  
+</p> 
+
+
+
+<a id="jira"></a>
+## <img alt="Allure" height="25" src="mediafiles/icons/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-831">Jira</a>
+____
+<p align="center">  
+<img title="Jira" src="mediafiles/screenshots/jira.png" width="850">  
 </p>
 
-## <img src="mediafiles/icons/AllureTestOps.svg" title="Allure TestOps" width="4%"/> Allure TestOps
-
-<p align="center">
-<img title="Allure TestOps DashBoard" src="mediafiles/screenshots/allureTestOps.png">
-</p>
-
-## <img src="mediafiles/icons/Jira.svg" title="Jira" width="4%"/> Jira
-
-<p align="center">
-<img title="Jira Task" src="mediafiles/screenshots/jira.png">
-</p>
 
 <a id="telegram"></a>
 ## <img alt="Allure" height="25"  src="mediafiles/icons/Telegram.svg" width="25"/></a> Уведомление в Telegram при помощи бота
