@@ -40,6 +40,8 @@ ____
 <img width="5%" title="Jira" src="mediafiles/icons/Jira.svg">
 </p>
 
+
+<a id="console"></a>
 ### Запуск из терминала
 
 ```
@@ -75,7 +77,13 @@ ___
 <img title="Allure Overview Dashboard" src="mediafiles/screenshots/jenkins.png" width="850">  
 </p> 
 
+<a id="allure-testops"></a>
+## <img alt="Allure" height="25" src="mediafiles/icons/AllureTestOps.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3593/dashboards">Allure TestOps</a>
+### *Allure TestOps Dashboard*
 
+<p align="center">  
+<img title="Allure TestOps Dashboard" src="mediafiles/screenshots/allureTestOps.png" width="850">  
+</p> 
 
 <a id="jira"></a>
 ## <img alt="Allure" height="25" src="mediafiles/icons/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-831">Jira</a>
