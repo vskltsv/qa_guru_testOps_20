@@ -21,8 +21,6 @@ import static io.qameta.allure.Allure.step;
 public class MainPageTest extends TestBase {
     public MainPage mainPage = new MainPage();
 
-
-
     @DisplayName("Switch language check")
     @ParameterizedTest(name = "Language: {0}")
     @MethodSource("switchLanguageOnMainPageData")
