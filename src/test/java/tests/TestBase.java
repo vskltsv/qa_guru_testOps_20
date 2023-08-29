@@ -1,46 +1,44 @@
 package tests;
 
 import attachments.Attachments;
+import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.WebConfig;
+import config.WebDriverProvider;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
-import static com.codeborne.selenide.Configuration.*;
+import static com.codeborne.selenide.Configuration.browserCapabilities;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
-    static WebConfig config = ConfigFactory.create(WebConfig.class, System.getProperties());
 
     @BeforeAll
     static void beforeAll() {
-
-        baseUrl = config.baseUrl();
-        browser = config.browser();
-        browserVersion = config.browserVersion();
-        pageLoadStrategy = "eager";
-        browserSize = config.browserSize();
-        if (config.isRemote()) {
-            remote = config.remoteUrl();
-        }
+        WebDriverManager.chromedriver().setup();
+        WebDriverProvider.configuration();
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of("enableVNC", true, "enableVideo", true));
 
         browserCapabilities = capabilities;
     }
-
-    @BeforeEach
-    void addListener() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
-
+//    @BeforeEach
+//    public void setupTest() {
+//        WebDriver driver = new ChromeDriver();
+//        WebDriverRunner.setWebDriver(driver);
+//    }
     @AfterEach
     void addAttachments() {
         Attachments.screenshotAs("Last screenshot");

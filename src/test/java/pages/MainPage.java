@@ -74,7 +74,6 @@ public class MainPage {
     public MainPage scrollToForInvestorsContent() {
         forInvestorsSection.scrollIntoView(true);
         return this;
-
     }
 
     public MainPage forInvestorsContentHeaderValue(String value) {

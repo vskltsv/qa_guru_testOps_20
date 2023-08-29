@@ -21,7 +21,7 @@ import static io.qameta.allure.Allure.step;
 public class MainPageTest extends TestBase {
     public MainPage mainPage = new MainPage();
 
-    @DisplayName("Switch language check")
+    @DisplayName("Проверка смены языка")
     @ParameterizedTest(name = "Language: {0}")
     @MethodSource("switchLanguageOnMainPageData")
     public void switchLanguageOnMainPage(List<String> items) {
@@ -39,7 +39,7 @@ public class MainPageTest extends TestBase {
                         "Press Centre")));
     }
 
-    @DisplayName("Company tab titles check")
+    @DisplayName("Проверка названий вкладок компании")
     @Test
     public void theCompanyTabContent() {
         step("Open main page", () -> open(""));
@@ -52,7 +52,7 @@ public class MainPageTest extends TestBase {
         step("Check header content", () -> mainPage.strategySectionHeaderValue("Стратегия"));
     }
 
-    @DisplayName("Consumer tab title check")
+    @DisplayName("Проверка вкладки 'Покупателю'")
     @Test
     public void theConsumerTabContentTest() {
         step("Open main page", () -> open(""));
@@ -61,7 +61,7 @@ public class MainPageTest extends TestBase {
     }
 
 
-    @DisplayName("Check address on page")
+    @DisplayName("Проверка адреса на странице")
     @Test
     public void viewAddressOnPageTest() {
         step("Open main page", () -> open(""));
@@ -69,7 +69,7 @@ public class MainPageTest extends TestBase {
         step("Check address value", () -> mainPage.footerAddressCheck("119049, Россия, г. Москва, улица Коровий Вал, 5, стр. 1"));
     }
 
-    @DisplayName("Search field test")
+    @DisplayName("Тест на проверку 'Поиск'")
     @Test
     public void searchFieldCheckTest() {
         step("Open main page", () -> open(""));
