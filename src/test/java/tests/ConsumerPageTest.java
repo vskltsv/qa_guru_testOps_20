@@ -17,8 +17,8 @@ public class ConsumerPageTest extends TestBase {
     @Test
     @DisplayName("Доступность раздела 'Новости' из вкладки 'Покупателю'")
     public void checkNewsSectionTests() {
-        step("Открыть страницу", () -> {
-            headerSearchPage.openPage("ru/", "Принять");
+        step("Открываем главную страницу", () -> {
+            consumerPage.openPage();
         });
         step("Переходим в раздел 'Покупателю'", () -> {
             consumerPage.goToSectionConsumer();
@@ -35,8 +35,8 @@ public class ConsumerPageTest extends TestBase {
     @Test
     @DisplayName("Проверка, что есть возможность скачать пресс-релиз к статье")
     public void checkAbilityToDownload() {
-        step("Открыть страницу", () -> {
-            headerSearchPage.openPage("ru/", "Принять");
+        step("Открываем главную страницу", () -> {
+            consumerPage.openPage();
         });
         step("Переходим в раздел 'Покупателю'", () -> {
             consumerPage.goToSectionConsumer();

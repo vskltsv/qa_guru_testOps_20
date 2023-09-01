@@ -7,9 +7,11 @@ import org.junit.jupiter.api.Assertions;
 import java.io.File;
 import java.io.FileNotFoundException;
 
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.open;
 
 public class ConsumerPage {
     private final SelenideElement
@@ -22,7 +24,11 @@ public class ConsumerPage {
             downloadFile = $(".button-link-trigger-hover");
 
 
+    public ConsumerPage openPage() {
+        open(baseUrl);
 
+        return this;
+    }
     public ConsumerPage goToSectionConsumer() {
         goToConsumer.click();
 
