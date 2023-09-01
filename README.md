@@ -61,11 +61,11 @@ gradle clean remote_test -Denv=remotelaunch
 
 ```bash  
 clean remote_test
-"-Dbrowser=${browser}"
-"-DbrowserVersion=${browserVersion}"
-"-DbrowserSize=${browserSize}"
-"-DbaseUrl=${baseUrl}"
-"-DremoteUrl=${remoteUrl}"
+"-Dbrowser=${BROWSER}"
+"-DbrowserSize=${BROWSER_SIZE}"
+"-DbrowserVersion=${BROWSER_VERSION}"
+"-DbaseUrl=${BASE_URL}"
+"-DremoteUrl=${SELENOID}"
 ```
 
 <a id="jenkins"></a>
