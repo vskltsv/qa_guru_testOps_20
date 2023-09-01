@@ -20,7 +20,7 @@ public class SearchTest extends TestBase {
         String searchType = "по дате";
 
         step("Открыть страницу", () -> {
-            headerSearchPage.openPage("ru/", "Принять");
+            headerSearchPage.openPage("/ru", "Принять");
         });
 
         step("Поиск из главной стр", () -> {
