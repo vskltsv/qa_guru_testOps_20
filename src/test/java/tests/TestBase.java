@@ -22,7 +22,7 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         WebDriverProvider.configuration();
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
@@ -31,11 +31,11 @@ public class TestBase {
 
         browserCapabilities = capabilities;
     }
-    @BeforeEach
-    public void setupTest() {
-        WebDriver driver = new ChromeDriver();
-        WebDriverRunner.setWebDriver(driver);
-    }
+//    @BeforeEach
+//    public void setupTest() {
+//        WebDriver driver = new ChromeDriver();
+//        WebDriverRunner.setWebDriver(driver);
+//    }
     @AfterEach
     void addAttachments() {
         Attachments.screenshotAs("Last screenshot");
