@@ -7,7 +7,7 @@ import pages.HeaderSearchPage;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("remote")
+@Tag("remote_test")
 public class SearchTest extends TestBase {
     HeaderSearchPage headerSearchPage = new HeaderSearchPage();
 

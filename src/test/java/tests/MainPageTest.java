@@ -17,7 +17,7 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-@Tag("remote")
+@Tag("remote_test")
 public class MainPageTest extends TestBase {
     public MainPage mainPage = new MainPage();
 

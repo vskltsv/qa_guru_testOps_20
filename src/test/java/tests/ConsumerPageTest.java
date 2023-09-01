@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Condition.exist;
 import static io.qameta.allure.Allure.step;
 
 
-@Tag("remote")
+@Tag("remote_test")
 public class ConsumerPageTest extends TestBase {
     ConsumerPage consumerPage = new ConsumerPage();
     HeaderSearchPage headerSearchPage = new HeaderSearchPage();
