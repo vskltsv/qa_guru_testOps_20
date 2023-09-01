@@ -9,15 +9,14 @@ import java.io.FileNotFoundException;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class ConsumerPage {
     private final SelenideElement
             goToConsumer = $(".header__nav-link"),
             scrollToNews = $(".news-block__head"),
             checkNews = $(byText("Новости")),
-            goToAllPublication = $("a.button.button--ghost"),
+            goToAllPublication = $x("//a[contains(text(),'Все публикации')]"),
             chooseFirstPublication = $("#splide01-slide01"),
             scrollToFile = $(".docslist__docs--tile"),
             downloadFile = $(".button-link-trigger-hover");
