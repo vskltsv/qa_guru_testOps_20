@@ -18,7 +18,7 @@ public class ConsumerPage {
             goToConsumer = $(".header__nav-link"),
             scrollToNews = $(".news-block__head"),
             checkNews = $(byText("Новости")),
-            goToAllPublication = $x("//*[@id=\"splide01\"]/div[2]/a"),
+            goToAllPublication = $("div.button button--ghost"),
             chooseFirstPublication = $("#splide01-slide01"),
             scrollToFile = $(".docslist__docs--tile"),
             downloadFile = $(".button-link-trigger-hover");
