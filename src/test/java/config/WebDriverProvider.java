@@ -1,6 +1,7 @@
 package config;
 
 import org.aeonbits.owner.ConfigFactory;
+
 import static com.codeborne.selenide.Configuration.*;
 
 public class WebDriverProvider {

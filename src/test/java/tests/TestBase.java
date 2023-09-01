@@ -3,12 +3,9 @@ package tests;
 import attachments.Attachments;
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import config.WebConfig;
 import config.WebDriverProvider;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -34,11 +31,11 @@ public class TestBase {
 
         browserCapabilities = capabilities;
     }
-//    @BeforeEach
-//    public void setupTest() {
-//        WebDriver driver = new ChromeDriver();
-//        WebDriverRunner.setWebDriver(driver);
-//    }
+    @BeforeEach
+    public void setupTest() {
+        WebDriver driver = new ChromeDriver();
+        WebDriverRunner.setWebDriver(driver);
+    }
     @AfterEach
     void addAttachments() {
         Attachments.screenshotAs("Last screenshot");
