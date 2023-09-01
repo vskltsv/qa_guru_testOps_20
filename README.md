@@ -50,17 +50,17 @@ ____
 ### Запуск из терминала
 
 ```
-gradle clean test -Denv=local 
+gradle clean  test -Denv=locallaunch     
 ```
 
 ```
-gradle clean test -Denv=remote
+gradle clean remote_test -Denv=remotelaunch   
 ```
 
 ***Удалённый запуск через Jenkins:***
 
 ```bash  
-clean remote
+clean remote_test
 "-Dbrowser=${browser}"
 "-DbrowserVersion=${browserVersion}"
 "-DbrowserSize=${browserSize}"

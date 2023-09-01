@@ -19,7 +19,6 @@ public interface WebConfig extends Config {
     String getBrowserVersion();
 
     @Key("browserSize")
-    @DefaultValue("1920x1080")
     String getBrowserSize();
 
     @Key("remoteUrl")
