@@ -12,11 +12,10 @@ public interface WebConfig extends Config {
     String getBaseUrl();
 
     @Key("browser")
-    @DefaultValue("CHROME")
+    @DefaultValue("chrome")
     String getBrowser();
 
     @Key("browserVersion")
-    @DefaultValue("100.0")
     String getBrowserVersion();
 
     @Key("browserSize")

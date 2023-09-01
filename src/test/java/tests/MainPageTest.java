@@ -24,7 +24,6 @@ public class MainPageTest extends TestBase {
     @DisplayName("Проверка смены языка")
     @ParameterizedTest(name = "Language: {0}")
     @MethodSource("switchLanguageOnMainPageData")
-    @Test
     public void switchLanguageOnMainPage(List<String> items) {
         step("Open main page", () -> open(""));
         step("Click on the lang switcher", () -> mainPage.clickSwitchLanguageIcon());
