@@ -10,7 +10,6 @@ import java.io.FileNotFoundException;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.open;
 
 public class ConsumerPage {
@@ -18,7 +17,7 @@ public class ConsumerPage {
             goToConsumer = $(".header__nav-link"),
             scrollToNews = $(".news-block__head"),
             checkNews = $(byText("Новости")),
-            goToAllPublication = $(".button button--ghost"),
+            goToAllPublication = $(byText("Все публикации")),
             chooseFirstPublication = $("#splide01-slide01"),
             scrollToFile = $(".docslist__docs--tile"),
             downloadFile = $(".button-link-trigger-hover");
