@@ -13,7 +13,6 @@ import static io.qameta.allure.Allure.step;
 @Tag("remote_test")
 public class ConsumerPageTest extends TestBase {
     ConsumerPage consumerPage = new ConsumerPage();
-    HeaderSearchPage headerSearchPage = new HeaderSearchPage();
     @Test
     @DisplayName("Доступность раздела 'Новости' из вкладки 'Покупателю'")
     public void checkNewsSectionTests() {
