@@ -1,6 +1,6 @@
 # Проект по автоматизации тестирования для компании [X5Group](https://www.x5.ru/ru/)
 
-> X5 Group1 — ведущая розничная компания с внушительным портфелем сервисов: от сетей розничной торговли до цифровых и
+> X5 Group — ведущая розничная компания с внушительным портфелем сервисов: от сетей розничной торговли до цифровых и
 > медийных платформ.
 
 ## **Содержание:**
@@ -60,7 +60,7 @@ gradle clean test -Denv=remote
 ***Удалённый запуск через Jenkins:***
 
 ```bash  
-clean remote_test
+clean remote
 "-Dbrowser=${browser}"
 "-DbrowserVersion=${browserVersion}"
 "-DbrowserSize=${browserSize}"
