@@ -15,7 +15,7 @@ public class ConsumerPage {
             goToConsumer = $(".header__nav-link"),
             scrollToNews = $(".news-block__head"),
             checkNews = $(".news-block__head"),
-            goToAllPublication = $("[class='button button--ghost']").shouldHave(text("Все публикации")),
+            goToAllPublication = $(".button button--ghost").shouldHave(text("Все публикации")),
             chooseFirstPublication = $("#splide01-slide01"),
             scrollToFile = $(".docslist__docs--tile"),
             downloadFile = $(".button-link-trigger-hover");
