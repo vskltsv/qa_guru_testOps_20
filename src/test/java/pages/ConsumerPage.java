@@ -8,7 +8,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class ConsumerPage {
     private final SelenideElement
@@ -20,6 +22,11 @@ public class ConsumerPage {
             scrollToFile = $(".docslist__docs--tile"),
             downloadFile = $(".button-link-trigger-hover");
 
+    public ConsumerPage openPage() {
+        open(baseUrl);
+
+        return this;
+    }
 
     public ConsumerPage goToSectionConsumer() {
         goToConsumer.click();
