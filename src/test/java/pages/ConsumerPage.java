@@ -7,17 +7,18 @@ import org.junit.jupiter.api.Assertions;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class ConsumerPage {
     private final SelenideElement
-            goToConsumer = $(".header__nav-link"),
+            goToConsumer = $(byText("Покупателю")),
             scrollToNews = $(".news-block__head"),
             checkNews = $(".news-block__head"),
-            goToAllPublication = $(".button button--ghost").shouldHave(text("Все публикации")),
+            goToAllPublication = $(".button--ghost"),
             chooseFirstPublication = $("#splide01-slide01"),
             scrollToFile = $(".docslist__docs--tile"),
             downloadFile = $(".button-link-trigger-hover");
@@ -47,7 +48,7 @@ public class ConsumerPage {
     }
 
     public ConsumerPage clickAllPublication() {
-        goToAllPublication.shouldBe(visible).shouldBe(enabled).click();
+        goToAllPublication.shouldBe(visible).click();
 
         return this;
     }

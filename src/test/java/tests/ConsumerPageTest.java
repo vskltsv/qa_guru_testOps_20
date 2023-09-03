@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import pages.ConsumerPage;
 
 import static com.codeborne.selenide.Condition.exist;
-import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 
