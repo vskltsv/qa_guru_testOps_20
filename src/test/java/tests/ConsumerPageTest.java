@@ -4,15 +4,17 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.ConsumerPage;
-import pages.HeaderSearchPage;
+
 
 import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 
 @Tag("remote_test")
 public class ConsumerPageTest extends TestBase {
-    ConsumerPage consumerPage = new ConsumerPage();
+   private ConsumerPage consumerPage = new ConsumerPage();
+
     @Test
     @DisplayName("Доступность раздела 'Новости' из вкладки 'Покупателю'")
     public void checkNewsSectionTests() {
@@ -30,7 +32,6 @@ public class ConsumerPageTest extends TestBase {
         });
 
     }
-
     @Test
     @DisplayName("Проверка, что есть возможность скачать пресс-релиз к статье")
     public void checkAbilityToDownload() {
@@ -40,7 +41,6 @@ public class ConsumerPageTest extends TestBase {
         step("Переходим в раздел 'Покупателю'", () -> {
             consumerPage.goToSectionConsumer();
         });
-
         step("Скроллим до раздела 'Новости'", () -> {
             consumerPage.scrollSectionNews(true);
         });
@@ -54,5 +54,4 @@ public class ConsumerPageTest extends TestBase {
             consumerPage.downloadingPressRelease(true);
         });
     }
-
 }
