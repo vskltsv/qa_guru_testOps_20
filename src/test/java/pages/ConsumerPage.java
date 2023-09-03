@@ -23,11 +23,6 @@ public class ConsumerPage {
             downloadFile = $(".button-link-trigger-hover");
 
 
-    public ConsumerPage openPage() {
-        open(baseUrl);
-
-        return this;
-    }
     public ConsumerPage goToSectionConsumer() {
         goToConsumer.click();
 
