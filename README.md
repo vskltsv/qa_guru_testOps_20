@@ -84,7 +84,7 @@ clean remote_test
 ___
 
 <p align="center">  
-<img title="Allure Overview Dashboard" src="mediafiles/screenshots/jenkins.png" width="850">  
+<img title="Allure Overview Dashboard" src="mediafiles/screenshots/allure-diplom.png" width="850">  
 </p> 
 
 <a id="allure-testops"></a>
@@ -92,7 +92,7 @@ ___
 ## <img alt="Allure" height="25" src="mediafiles/icons/AllureTestOps.svg" width="25"/></a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/3593/dashboards">Allure TestOps</a>
 
 <p align="center">  
-<img title="Allure TestOps Dashboard" src="mediafiles/screenshots/allureTestOps.png" width="850">  
+<img title="Allure TestOps Dashboard" src="mediafiles/screenshots/allureOps-diplom.png" width="850">  
 </p> 
 
 <a id="jira"></a>
@@ -101,7 +101,7 @@ ___
 
 ____
 <p align="center">  
-<img title="Jira" src="mediafiles/screenshots/jira.png" width="850">  
+<img title="Jira" src="mediafiles/screenshots/jira-diplom.png" width="850">  
 </p>
 
 
@@ -111,7 +111,7 @@ ____
 
 ____
 <p align="center">  
-<img title="Allure Overview Dashboard" src="mediafiles/screenshots/telegram.png" width="550">  
+<img title="Allure Overview Dashboard" src="mediafiles/screenshots/telegramm-diplom.png" width="550">  
 </p>
 
 ____
