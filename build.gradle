@@ -41,13 +41,13 @@ allure {
         version = "${allureVersion}"
     }
     report {
-        version.set("2.22.0")
+        version.set("${allureVersion}")
     }
     adapter { // отвечает за появление папочки build/allure-results
         aspectjWeaver.set(true) //обработка аннотации @Step
         frameworks {
             junit5 { //название фреймворка
-                adapterVersion.set("2.22.0") //версия интеграции фреймворка и Allure
+                adapterVersion.set("${allureVersion}") //версия интеграции фреймворка и Allure
             }
         }
     }
