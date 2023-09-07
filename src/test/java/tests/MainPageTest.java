@@ -41,7 +41,7 @@ public class MainPageTest extends TestBase {
 
     @DisplayName("Проверка названий вкладок компании")
     @Test
-    public void theCompanyTabContent() {
+    public void companyTabContent() {
         step("Open main page", () -> open(""));
         step("Open company tab", () -> mainPage.clickOnText("Компания"));
         step("Check investors content exists", () -> mainPage.scrollToForInvestorsContent());
@@ -54,7 +54,7 @@ public class MainPageTest extends TestBase {
 
     @DisplayName("Проверка вкладки 'Покупателю'")
     @Test
-    public void theConsumerTabContentTest() {
+    public void consumerTabContentTest() {
         step("Open main page", () -> open(""));
         step("Open consumer tab", () -> mainPage.clickOnText("Покупателю"));
         step("Check header content", () -> mainPage.titleCheck("X5 для покупателя"));
@@ -66,7 +66,8 @@ public class MainPageTest extends TestBase {
     public void viewAddressOnPageTest() {
         step("Open main page", () -> open(""));
         step("Scroll to address", () -> mainPage.scrollToFooter());
-        step("Check address value", () -> mainPage.footerAddressCheck("119049, Россия, г. Москва, улица Коровий Вал, 5, стр. 1"));
+        step("Check address value", () ->
+                mainPage.footerAddressCheck("119049, Россия, г. Москва, улица Коровий Вал, 5, стр. 1"));
     }
 
     @DisplayName("Тест на проверку 'Поиск'")

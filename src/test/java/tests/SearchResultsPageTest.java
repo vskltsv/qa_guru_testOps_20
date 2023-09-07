@@ -3,13 +3,13 @@ package tests;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.HeaderSearchPage;
+import pages.SearchResultsPage;
 
 import static io.qameta.allure.Allure.step;
 
 @Tag("remote_test")
-public class SearchTest extends TestBase {
-    HeaderSearchPage headerSearchPage = new HeaderSearchPage();
+public class SearchResultsPageTest extends TestBase {
+    SearchResultsPage searchResultsPage = new SearchResultsPage();
 
     @Test
     @DisplayName("Проверка поиска")
@@ -20,35 +20,35 @@ public class SearchTest extends TestBase {
         String searchType = "по дате";
 
         step("Открыть страницу", () -> {
-            headerSearchPage.openPage("", "Принять");
+            searchResultsPage.openPage("", "Принять");
         });
 
         step("Поиск из главной стр", () -> {
-            headerSearchPage.searchFromMainPage(firstSearch);
+            searchResultsPage.searchFromMainPage(firstSearch);
 
             step("проверка поиска", () -> {
-                headerSearchPage.checkSearch(firstSearch);
+                searchResultsPage.checkSearch(firstSearch);
             });
         });
 
         step("Поиск из раздела результаты", () -> {
-            headerSearchPage.searchFromResultPage(secondSearch);
+            searchResultsPage.searchFromResultPage(secondSearch);
 
             step("Тип поиска", () -> {
-                headerSearchPage.searchFromResultPageView(searchType);
+                searchResultsPage.searchFromResultPageView(searchType);
             });
 
             step("Поиск", () -> {
-                headerSearchPage.searchResult("Найти");
+                searchResultsPage.searchResult("Найти");
             });
 
             step("проверка поиска", () -> {
-                headerSearchPage.checkSearch(secondSearch);
+                searchResultsPage.checkSearch(secondSearch);
             });
         });
 
         step("Переход на главную страницу", () -> {
-            headerSearchPage.goToMainPage();
+            searchResultsPage.goToMainPage();
         });
     }
 }

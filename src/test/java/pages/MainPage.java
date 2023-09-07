@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 public class MainPage {
 
 
-    SelenideElement
+    private final SelenideElement
             languageIcon = $(".header__lang-switcher"),
             title = $(".hero-company__title"),
             searchIcon = $(".header-search__search-btn"),
@@ -21,6 +21,7 @@ public class MainPage {
             forInvestorsSection = $(".for-investors"),
             keyNumbersSection = $(".key-numbers"),
             strategySectionHeader = $(".strategy__header");
+
 
 
     public MainPage clickSwitchLanguageIcon() {

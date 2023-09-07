@@ -7,8 +7,8 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class HeaderSearchPage {
-    private SelenideElement
+public class SearchResultsPage {
+    private final SelenideElement
             cookieConsent = $(".cookie-consent__button"),
             headerSearch = $("div.header-search"),
             headerSearchTerm = $(".header-search__term"),

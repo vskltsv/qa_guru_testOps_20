@@ -61,11 +61,11 @@ gradle clean remote_test -Denv=remotelaunch
 
 ```bash  
 clean remote_test
-"-Dbrowser=${BROWSER}"
-"-DbrowserSize=${BROWSER_SIZE}"
-"-DbrowserVersion=${BROWSER_VERSION}"
-"-DbaseUrl=${BASE_URL}"
-"-DremoteUrl=${SELENOID}"
+"-Dbrowser=${BROWSER}" -- (браузер, по умолчанию chrome)
+"-DbrowserSize=${BROWSER_SIZE}" -- (размер окна браузера, по умолчанию 1920x1080)
+"-DbrowserVersion=${BROWSER_VERSION}" -- (версия браузера, по умолчанию 100.0)
+"-DbaseUrl=${BASE_URL}" -- (адрес тестируемого веб-сайта)
+"-DremoteUrl=${SELENOID}" -- (логин, пароль и адрес удаленного сервера Selenoid)
 ```
 
 <a id="jenkins"></a>
@@ -97,7 +97,7 @@ ___
 
 <a id="jira"></a>
 
-## <img alt="Allure" height="25" src="mediafiles/icons/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-831">Jira</a>
+## <img alt="Allure" height="25" src="mediafiles/icons/Jira.svg" width="25"/></a> Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-862">Jira</a>
 
 ____
 <p align="center">  

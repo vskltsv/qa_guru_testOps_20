@@ -6,18 +6,20 @@ import org.junit.jupiter.api.Test;
 import pages.ConsumerPage;
 
 import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 
 @Tag("remote_test")
 public class ConsumerPageTest extends TestBase {
     public ConsumerPage consumerPage = new ConsumerPage();
+
     @Test
     @DisplayName("Доступность раздела 'Новости' из вкладки 'Покупателю'")
     public void checkNewsSectionTests() {
-        step("Открываем главную страницу", () -> {
-            consumerPage.openPage();
-        });
+        step("Открываем главную страницу", () ->
+                open(""));
+
         step("Переходим в раздел 'Покупателю'", () -> {
             consumerPage.goToSectionConsumer();
         });
@@ -33,9 +35,8 @@ public class ConsumerPageTest extends TestBase {
     @Test
     @DisplayName("Проверка, что есть возможность скачать пресс-релиз к статье")
     public void checkAbilityToDownload() {
-        step("Открываем главную страницу", () -> {
-            consumerPage.openPage();
-        });
+        step("Открываем главную страницу", () ->
+                open(""));
         step("Переходим в раздел 'Покупателю'", () -> {
             consumerPage.goToSectionConsumer();
         });
