@@ -1,6 +1,7 @@
 package tests;
 
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -18,6 +19,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @Tag("remote_test")
+@Owner("Vladimir Sokoltsov")
 public class MainPageTest extends TestBase {
     public MainPage mainPage = new MainPage();
 

@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -8,6 +9,7 @@ import pages.SearchResultsPage;
 import static io.qameta.allure.Allure.step;
 
 @Tag("remote_test")
+@Owner("Vladimir Sokoltsov")
 public class SearchResultsPageTest extends TestBase {
     SearchResultsPage searchResultsPage = new SearchResultsPage();
 
