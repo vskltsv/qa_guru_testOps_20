@@ -9,9 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SearchResultsPage {
     private final SelenideElement
-            cookieConsent = $(".cookie-consent__button"),
-            headerSearch = $("div.header-search"),
-            headerSearchTerm = $(".header-search__term"),
+
             searchResultsList = $(".search-results__list"),
             searchFormClearBtn = $(".search-form__clear-btn"),
             searchFormTerm = $(".search-form__term"),
@@ -19,16 +17,6 @@ public class SearchResultsPage {
             searchFormButtons = $("div.search-form__buttons"),
             headerLogo = $(".header__logo");
 
-    public void openPage(String language, String acceptcookie ) {
-        open(language);
-        cookieConsent.find(byText(acceptcookie)).click();
-    }
-
-    public void searchFromMainPage(String search) {
-        headerSearch.click();
-        headerSearchTerm.click();
-        headerSearchTerm.setValue(search).pressEnter();
-    }
 
     public void checkSearch(String textSearch) {
         searchResultsList.shouldHave(text(textSearch));

@@ -18,7 +18,7 @@ public class ConsumerPageTest extends TestBase {
 
     @Test
     @DisplayName("Доступность раздела 'Новости' из вкладки 'Покупателю'")
-    public void checkNewsSectionTests() {
+    public void verifyNewsSectionAvailabilityInConsumerTab() {
         step("Открываем главную страницу", () ->
                 open(""));
 
@@ -36,7 +36,7 @@ public class ConsumerPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверка, что есть возможность скачать пресс-релиз к статье")
-    public void checkAbilityToDownload() {
+    public void verifyAbilityToDownloadPressRelease() {
         step("Открываем главную страницу", () ->
                 open(""));
         step("Переходим в раздел 'Покупателю'", () -> {

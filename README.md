@@ -61,12 +61,23 @@ gradle clean remote_test -Denv=remotelaunch
 
 ```bash  
 clean remote_test
-"-Dbrowser=${BROWSER}" -- (браузер, по умолчанию chrome)
-"-DbrowserSize=${BROWSER_SIZE}" -- (размер окна браузера, по умолчанию 1920x1080)
-"-DbrowserVersion=${BROWSER_VERSION}" -- (версия браузера, по умолчанию 100.0)
-"-DbaseUrl=${BASE_URL}" -- (адрес тестируемого веб-сайта)
-"-DremoteUrl=${SELENOID}" -- (логин, пароль и адрес удаленного сервера Selenoid)
+"-Dbrowser=${BROWSER}" 
+"-DbrowserSize=${BROWSER_SIZE}" 
+"-DbrowserVersion=${BROWSER_VERSION}" 
+"-DbaseUrl=${BASE_URL}"
+"-DremoteUrl=${SELENOID}" 
 ```
+### Параметры запуска
+
+<code>browser</code> – браузер, в котором будут выполняться тесты (_по умолчанию - <code>chrome</code>_).
+
+<code>browserVersion</code> – версия браузера (_по умолчанию - <code>100</code>_).
+
+<code>browserSize</code> – размер окна браузера, в котором будут выполняться тесты (_по умолчанию - <code>1920x1080</code>_).
+
+<code>remoteURL</code> - адрес удаленного сервера, где будут запускаться тесты.
+
+<code>baseUrl</code> - адрес базового урла тестируемого сайта.
 
 <a id="jenkins"></a>
 

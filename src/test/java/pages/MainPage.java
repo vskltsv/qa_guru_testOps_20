@@ -6,11 +6,15 @@ import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class MainPage {
 
 
     private final SelenideElement
+            mainSearch = $("div.header-search"),
+            mainSearchTerm = $(".header-search__term"),
+            cookieConsent = $(".cookie-consent__button"),
             languageIcon = $(".header__lang-switcher"),
             title = $(".hero-company__title"),
             searchIcon = $(".header-search__search-btn"),
@@ -22,7 +26,16 @@ public class MainPage {
             keyNumbersSection = $(".key-numbers"),
             strategySectionHeader = $(".strategy__header");
 
+    public void openPage(String language, String acceptcookie) {
+        open(language);
+        cookieConsent.find(byText(acceptcookie)).click();
+    }
 
+    public void searchFromMainPage(String search) {
+        mainSearch.click();
+        mainSearchTerm.click();
+        mainSearchTerm.setValue(search).pressEnter();
+    }
 
     public MainPage clickSwitchLanguageIcon() {
         languageIcon.click();

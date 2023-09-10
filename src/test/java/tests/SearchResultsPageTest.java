@@ -4,6 +4,7 @@ import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import pages.MainPage;
 import pages.SearchResultsPage;
 
 import static io.qameta.allure.Allure.step;
@@ -12,21 +13,22 @@ import static io.qameta.allure.Allure.step;
 @Owner("Vladimir Sokoltsov")
 public class SearchResultsPageTest extends TestBase {
     SearchResultsPage searchResultsPage = new SearchResultsPage();
+    MainPage mainPage = new MainPage();
 
     @Test
     @DisplayName("Проверка поиска")
-    void headerSearchTest() {
+    void searchTest() {
 
         String firstSearch = "география";
         String secondSearch = "X5 Group";
         String searchType = "по дате";
 
         step("Открыть страницу", () -> {
-            searchResultsPage.openPage("", "Принять");
+            mainPage.openPage("", "Принять");
         });
 
         step("Поиск из главной стр", () -> {
-            searchResultsPage.searchFromMainPage(firstSearch);
+            mainPage.searchFromMainPage(firstSearch);
 
             step("проверка поиска", () -> {
                 searchResultsPage.checkSearch(firstSearch);

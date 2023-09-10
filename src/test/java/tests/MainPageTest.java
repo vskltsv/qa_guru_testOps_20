@@ -43,7 +43,7 @@ public class MainPageTest extends TestBase {
 
     @DisplayName("Проверка названий вкладок компании")
     @Test
-    public void companyTabContent() {
+    public void verifyCompanyTabTitles() {
         step("Open main page", () -> open(""));
         step("Open company tab", () -> mainPage.clickOnText("Компания"));
         step("Check investors content exists", () -> mainPage.scrollToForInvestorsContent());
@@ -56,7 +56,7 @@ public class MainPageTest extends TestBase {
 
     @DisplayName("Проверка вкладки 'Покупателю'")
     @Test
-    public void consumerTabContentTest() {
+    public void verifyConsumerTabContent() {
         step("Open main page", () -> open(""));
         step("Open consumer tab", () -> mainPage.clickOnText("Покупателю"));
         step("Check header content", () -> mainPage.titleCheck("X5 для покупателя"));
