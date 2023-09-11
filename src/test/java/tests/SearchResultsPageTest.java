@@ -17,16 +17,17 @@ public class SearchResultsPageTest extends TestBase {
     @DisplayName("Тест на проверку 'Поиск'")
     @Test
     public void searchFieldCheckTest() {
-        step("Open main page", () -> {
+        step("Открыть главную страницу", () -> {
             mainPage.openPage();
             mainPage.clickCookieConsent("Принять");
         });
-        step("Click search icon", () -> mainPage.searchIconClick());
-        step("Set value in search field", () -> mainPage.setValueOnSearchField("Новости"));
-        step("Click search button", () -> mainPage.clickOnText("Найти"));
-        step("Check title", () -> searchResultsPage.checkTitleOnSearchResult("Результаты поиска"));
-        step("Check result", () -> searchResultsPage.searchResultIsNotEmpty());
+        step("Нажать на иконку поиска", () -> mainPage.searchIconClick());
+        step("Установить значение в поле поиска", () -> mainPage.setValueOnSearchField("Новости"));
+        step("Нажать кнопку поиска", () -> mainPage.clickOnText("Найти"));
+        step("Проверка заголовка", () -> searchResultsPage.checkTitleOnSearchResult("Результаты поиска"));
+        step("Проверка результатов", () -> searchResultsPage.searchResultIsNotEmpty());
     }
+
     @Test
     @DisplayName("Проверка поиска")
     void searchTest() {
