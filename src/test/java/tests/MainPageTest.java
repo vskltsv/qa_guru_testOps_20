@@ -15,7 +15,6 @@ import java.util.stream.Stream;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Selenide.$$;
-import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @Tag("remote_test")
@@ -27,9 +26,12 @@ public class MainPageTest extends TestBase {
     @ParameterizedTest(name = "Language: {0}")
     @MethodSource("switchLanguageOnMainPageData")
     public void switchLanguageOnMainPage(List<String> items) {
-        step("Open main page", () -> open(""));
-        step("Click on the lang switcher", () -> mainPage.clickSwitchLanguageIcon());
-        step("Result check", () -> $$(".header__nav-list").should(texts(items)));
+        step("Открыть страницу", () -> {
+            mainPage.openPage();
+            mainPage.clickCookieConsent("Принять");
+        });
+        step("Нажать на переключатель языка", () -> mainPage.clickSwitchLanguageIcon());
+        step("Проверка результата", () -> $$(".header__nav-list").should(texts(items)));
     }
 
     static Stream<Arguments> switchLanguageOnMainPageData() {
@@ -41,46 +43,19 @@ public class MainPageTest extends TestBase {
                         "Press Centre")));
     }
 
-    @DisplayName("Проверка названий вкладок компании")
-    @Test
-    public void verifyCompanyTabTitles() {
-        step("Open main page", () -> open(""));
-        step("Open company tab", () -> mainPage.clickOnText("Компания"));
-        step("Check investors content exists", () -> mainPage.scrollToForInvestorsContent());
-        step("Check header content", () -> mainPage.forInvestorsContentHeaderValue("Инвесторам"));
-        step("Check key numbers content exists", () -> mainPage.scrollToKeyNumbersSection());
-        step("Check header content", () -> mainPage.keyNumbersSectionContentHeaderValue("Ключевые цифры"));
-        step("Check strategy content exists", () -> mainPage.scrollToStrategySection());
-        step("Check header content", () -> mainPage.strategySectionHeaderValue("Стратегия"));
-    }
-
-    @DisplayName("Проверка вкладки 'Покупателю'")
-    @Test
-    public void verifyConsumerTabContent() {
-        step("Open main page", () -> open(""));
-        step("Open consumer tab", () -> mainPage.clickOnText("Покупателю"));
-        step("Check header content", () -> mainPage.titleCheck("X5 для покупателя"));
-    }
-
 
     @DisplayName("Проверка адреса на странице")
     @Test
     public void viewAddressOnPageTest() {
-        step("Open main page", () -> open(""));
-        step("Scroll to address", () -> mainPage.scrollToFooter());
-        step("Check address value", () ->
+        step("Открыть главную страницу", () -> {
+            mainPage.openPage();
+            mainPage.clickCookieConsent("Принять");
+        });
+        step("Прокрутить до адреса", () -> mainPage.scrollToFooter());
+        step("Проверка значения адреса", () ->
                 mainPage.footerAddressCheck("119049, Россия, г. Москва, улица Коровий Вал, 5, стр. 1"));
     }
 
-    @DisplayName("Тест на проверку 'Поиск'")
-    @Test
-    public void searchFieldCheckTest() {
-        step("Open main page", () -> open(""));
-        step("Click search icon", () -> mainPage.searchIconClick());
-        step("Set value in search field", () -> mainPage.setValueOnSearchField("Новости"));
-        step("Click search button", () -> mainPage.clickOnText("Найти"));
-        step("Check title", () -> mainPage.checkTitleOnSearchResult("Результаты поиска"));
-        step("Check result", () -> mainPage.searchResultIsNotEmpty());
-    }
+
 
 }

@@ -12,9 +12,21 @@ import static io.qameta.allure.Allure.step;
 @Tag("remote_test")
 @Owner("Vladimir Sokoltsov")
 public class SearchResultsPageTest extends TestBase {
-    SearchResultsPage searchResultsPage = new SearchResultsPage();
-    MainPage mainPage = new MainPage();
-
+   public SearchResultsPage searchResultsPage = new SearchResultsPage();
+   public MainPage mainPage = new MainPage();
+    @DisplayName("Тест на проверку 'Поиск'")
+    @Test
+    public void searchFieldCheckTest() {
+        step("Open main page", () -> {
+            mainPage.openPage();
+            mainPage.clickCookieConsent("Принять");
+        });
+        step("Click search icon", () -> mainPage.searchIconClick());
+        step("Set value in search field", () -> mainPage.setValueOnSearchField("Новости"));
+        step("Click search button", () -> mainPage.clickOnText("Найти"));
+        step("Check title", () -> searchResultsPage.checkTitleOnSearchResult("Результаты поиска"));
+        step("Check result", () -> searchResultsPage.searchResultIsNotEmpty());
+    }
     @Test
     @DisplayName("Проверка поиска")
     void searchTest() {
@@ -24,7 +36,8 @@ public class SearchResultsPageTest extends TestBase {
         String searchType = "по дате";
 
         step("Открыть страницу", () -> {
-            mainPage.openPage("", "Принять");
+            mainPage.openPage();
+            mainPage.clickCookieConsent("Принять");
         });
 
         step("Поиск из главной стр", () -> {

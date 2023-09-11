@@ -2,7 +2,6 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -16,18 +15,20 @@ public class MainPage {
             mainSearchTerm = $(".header-search__term"),
             cookieConsent = $(".cookie-consent__button"),
             languageIcon = $(".header__lang-switcher"),
-            title = $(".hero-company__title"),
+
             searchIcon = $(".header-search__search-btn"),
             searchField = $("#search-term-header"),
-            searchResultTitle = $(".search-results-header__title"),
-            searchResults = $(".search-results__content-section"),
-            footerPosition = $(".footer__top"),
-            forInvestorsSection = $(".for-investors"),
-            keyNumbersSection = $(".key-numbers"),
-            strategySectionHeader = $(".strategy__header");
 
-    public void openPage(String language, String acceptcookie) {
-        open(language);
+            footerPosition = $(".footer__top");
+
+
+
+
+    public void openPage() {
+        open("");
+    }
+
+    public void clickCookieConsent(String acceptcookie) {
         cookieConsent.find(byText(acceptcookie)).click();
     }
 
@@ -55,24 +56,6 @@ public class MainPage {
 
     }
 
-    public MainPage checkTitleOnSearchResult(String value) {
-        searchResultTitle.shouldHave(text(value));
-        return this;
-
-    }
-
-    public MainPage titleCheck(String value) {
-        title.shouldHave(text(value));
-        return this;
-
-    }
-
-    public MainPage searchResultIsNotEmpty() {
-        searchResults.shouldNotBe(empty);
-        return this;
-
-    }
-
     public MainPage scrollToFooter() {
         footerPosition.scrollIntoView(true);
         return this;
@@ -84,42 +67,6 @@ public class MainPage {
         return this;
 
     }
-
-    public MainPage scrollToForInvestorsContent() {
-        forInvestorsSection.scrollIntoView(true);
-        return this;
-    }
-
-    public MainPage forInvestorsContentHeaderValue(String value) {
-        forInvestorsSection.shouldHave(text(value));
-        return this;
-
-    }
-
-    public MainPage scrollToStrategySection() {
-        strategySectionHeader.scrollIntoView(true);
-        return this;
-
-    }
-
-    public MainPage strategySectionHeaderValue(String value) {
-        strategySectionHeader.shouldHave(text(value));
-        return this;
-
-    }
-
-    public MainPage scrollToKeyNumbersSection() {
-        keyNumbersSection.scrollIntoView(true);
-        return this;
-
-    }
-
-    public MainPage keyNumbersSectionContentHeaderValue(String value) {
-        keyNumbersSection.shouldHave(text(value));
-        return this;
-
-    }
-
 
     public MainPage clickOnText(String tab) {
         $(byText(tab)).click();

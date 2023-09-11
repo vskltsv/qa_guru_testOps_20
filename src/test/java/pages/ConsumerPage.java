@@ -2,11 +2,8 @@ package pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import org.junit.jupiter.api.Assertions;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -16,10 +13,9 @@ public class ConsumerPage {
             goToConsumer = $(byText("Покупателю")),
             scrollToNews = $(".news-block__head"),
             checkNews = $(".news-block__head"),
-            goToAllPublication = $(".button--ghost"),
-            chooseFirstPublication = $("#splide01-slide01"),
-            scrollToFile = $(".docslist__docs--tile"),
-            downloadFile = $(".button-link-trigger-hover");
+            title = $(".hero-company__title"),
+            goToAllPublication = $(".button--ghost");
+
 
 
 
@@ -40,24 +36,16 @@ public class ConsumerPage {
 
         return this;
     }
+    public ConsumerPage titleCheck(String value) {
+        title.shouldHave(text(value));
+        return this;
 
+    }
     public ConsumerPage clickAllPublication() {
         goToAllPublication.shouldBe(visible).click();
 
         return this;
     }
 
-    public ConsumerPage getFirstPublication() {
-        chooseFirstPublication.click();
 
-        return this;
-    }
-
-    public ConsumerPage downloadingPressRelease(Boolean value) throws FileNotFoundException {
-        scrollToFile.scrollIntoView(value);
-        File file = downloadFile.download();
-        Assertions.assertTrue(file.exists());
-
-        return this;
-    }
 }
